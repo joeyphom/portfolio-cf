@@ -1,6 +1,8 @@
+skip_before_filter :verify_authenticity_token, :only => [:update]
+
 before do
   content_type :json
-  headers 'Access-Control-Allow-Origin' => 'joeyphom.github.io',
+  headers 'Access-Control-Allow-Origin' => '*',
           'Access-Control-Allow-Methods' => ['POST']
 end
 
