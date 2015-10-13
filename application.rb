@@ -1,6 +1,6 @@
 before do
   content_type :json
-  headers 'Access-Control-Allow-Origin' => '*',
+  headers 'Access-Control-Allow-Origin' => 'joeyphom.github.io',
           'Access-Control-Allow-Methods' => ['POST']
 end
 
@@ -19,8 +19,8 @@ post '/send_email' do
         :address              => 'smtp.sendgrid.net',
         :port                 => '587',
         :enable_starttls_auto => true,
-        :user_name            => ENV['SENDGRID_USERNAME'],
-        :password             => ENV['SENDGRID_PASSWORD'],
+        :user_name            => ENV['joeyphom'],
+        :password             => ENV['h0b01324'],
         :authentication       => :plain,
         :domain               => 'heroku.com'
       })
