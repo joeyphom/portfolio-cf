@@ -1,12 +1,10 @@
-skip_before_filter :verify_authenticity_token, :only => [:update]
-
 before do
   content_type :json
   headers 'Access-Control-Allow-Origin' => '*',
           'Access-Control-Allow-Methods' => ['POST']
 end
 
-set :protection, false
+#set :protection, false
 set :public_dir, Proc.new { File.join(root, "_site") }
 
 post '/send_email' do

@@ -7,5 +7,6 @@ require 'pony'
 use Rack::Recaptcha, :public_key => '6Lfiug4TAAAAABkRBC3a5ya2bDyImGqUOuI8wVCq', :private_key => 6Lfiug4TAAAAAGOLODp1FIHvidBccGZS_0-woyyi'
 helpers Rack::Recaptcha::Helpers
 
+enable :sessions
 require './application'
 run Sinatra::Application
